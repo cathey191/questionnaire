@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 		//first question
 		if (buttonClass == 'button firButton'){
-			if (answer == 'Wellington' answer == 'wellington') {
+			if (answer == 'Wellington' || answer == 'wellington') {
 				passArray.push(answer);
 				console.log('pass');
 			} else {
