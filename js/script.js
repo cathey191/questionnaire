@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 		//first question
 		if (buttonClass == 'button firButton'){
-			if (answer == 'Wellington') {
+			if (answer == 'Wellington' answer == 'wellington') {
 				passArray.push(answer);
 				console.log('pass');
 			} else {
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 		//second question
 		}	else if (buttonClass == 'button secButton') {
-			if (answer == 'Russia' || 'russia') {
+			if (answer == 'Russia' || answer == 'russia') {
 				passArray.push(answer);
 			} else {
 				failArray.push(answer);
@@ -50,8 +50,8 @@ $(document).ready(function(){
 			$('#button').addClass('thrButton');
 
 		//third question
-		} else if (buttonClass == 'button thrButton') {
-			if (answer == 'Two' || '2' || 'two') {
+	} else if (buttonClass == 'button thrButton') {
+			if (answer == 'Two' || answer == '2' || answer == 'two') {
 				passArray.push(answer);
 			} else {
 				failArray.push(answer);
@@ -62,6 +62,6 @@ $(document).ready(function(){
 			$('#button').addClass('fouButton');
 		}
 
-	})
+	});
 
  });
