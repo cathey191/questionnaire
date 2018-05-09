@@ -20,17 +20,16 @@ $(document).ready(function(){
 	};
 
 	$('#button').click(function(){
-		var answer = document.getElementById('input').value;
+		var answerLower = document.getElementById('input').value;
+		var answer = answerLower.toLowerCase();
 		var buttonClass = document.getElementById('button').className;
 
 		//first question
 		if (buttonClass == 'button firButton'){
-			if (answer == 'Wellington' || answer == 'wellington') {
+			if (answer == 'wellington') {
 				passArray.push(answer);
-				console.log('pass');
 			} else {
 				failArray.push(answer);
-				console.log('fail')
 			}
 			counter();
 			$('#question').text('Which country has the largest surface area in the world?');
@@ -39,7 +38,7 @@ $(document).ready(function(){
 
 		//second question
 		}	else if (buttonClass == 'button secButton') {
-			if (answer == 'Russia' || answer == 'russia') {
+			if (answer == 'russia') {
 				passArray.push(answer);
 			} else {
 				failArray.push(answer);
@@ -51,7 +50,7 @@ $(document).ready(function(){
 
 		//third question
 	} else if (buttonClass == 'button thrButton') {
-			if (answer == 'Two' || answer == '2' || answer == 'two') {
+			if (answer == '2' || answer == 'two') {
 				passArray.push(answer);
 			} else {
 				failArray.push(answer);
