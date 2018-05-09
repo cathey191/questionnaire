@@ -17,6 +17,7 @@ $(document).ready(function(){
 		$('.correct').text(passNumber);
 		$('.incorrect').text(failNumber);
 		$('.total').text(totalNumber);
+
 	};
 
 	$('#button').click(function(){
@@ -55,10 +56,15 @@ $(document).ready(function(){
 			} else {
 				failArray.push(answer);
 			}
+
 			counter();
-			$('#question').text('test');
-			$('#button').removeClass('thrButton');
-			$('#button').addClass('fouButton');
+
+			$('#question').text('The End');
+			$('#button').removeClass('secButton');
+			$('#button').addClass('endButton');
+			$('#button').css('display', 'none');
+			$('#input').css('display', 'none');
+
 		}
 
 	});
