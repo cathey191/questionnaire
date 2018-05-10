@@ -13,13 +13,13 @@ $(document).ready(function(){
 		//total number
 		var totalWords = passWords + failWords
 		var totalNumber = totalWords.toString();
-
+		//changes numbers of correct/incorrect
 		$('.correct').text(passNumber);
 		$('.incorrect').text(failNumber);
 		$('.total').text(totalNumber);
-
 	};
 
+	//button
 	$('#button').click(function(){
 		var answerLower = document.getElementById('input').value;
 		var answer = answerLower.toLowerCase();
@@ -56,17 +56,14 @@ $(document).ready(function(){
 			} else {
 				failArray.push(answer);
 			}
-
 			counter();
-
 			$('#question').text('The End');
-			$('#button').removeClass('secButton');
-			$('#button').addClass('endButton');
 			$('#button').css('display', 'none');
 			$('#input').css('display', 'none');
-
 		}
 
+		//clears input
+		document.getElementById('input').value = '';
 	});
 
  });
